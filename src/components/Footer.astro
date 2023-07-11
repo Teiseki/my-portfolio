@@ -1,17 +1,30 @@
 ---
-import Social from "./Social.astro";
+import twitter from '../images/footer/twitter.svg';
+import github from '../images/footer/github.svg';
+import note from '../images/footer/note.svg';
 ---
 
 <style>
-    footer {
+    .sns-btn {
         display: flex;
-        gap: 5rem;
-        margin-top: 2rem;
+        gap: 1rem;
+        margin-top: 20rem;
+        align-items: center;
+        justify-content: center;
+        vertical-align: middle;
+    }
+    .sns-btn li {
+        width: 40px;
+        margin-left: 5px;
+        margin-right: 5px;
+        list-style: none;
     }
 </style>
 
 <footer>
-    <Social platform="twitter" username="_tamtamrairai_" />
-    <Social platform="github" username="Teiseki" />
-    <Social platform="note" username="teiseki_mol" />
+    <ul class="sns-btn">
+        <li><a href="https://twitter.com/_tamtamrairai_" target="_blank"><img src={twitter} alt="twitter"></a></li>
+        <li><a href="https://github.com/Teiseki" target="_blank"><img src={github} alt="github"></a></li>
+        <li><a href="https://instagram.com/teiseki_mol" target="_blank"><img src={note} alt="note"></a></li>
+    </ul>
 </footer>
